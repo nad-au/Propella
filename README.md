@@ -1,2 +1,2 @@
-# InvestOz
-Property Investment sample app demonstrating Clean Architecture
+# Propella
+Property portfolio app demonstrating Clean Architecture
