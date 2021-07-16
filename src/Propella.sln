@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{8671F2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Api.Client", "Integrations\Domain\V2\Domain.Api.Client\src\Domain.Api.Client\Domain.Api.Client.csproj", "{EE9A786B-3AEB-4A4B-BB5B-068B16ED9F79}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Api.Playground", "Integrations\Domain\V2\Domain.Api.Playground\Domain.Api.Playground.csproj", "{85940E2F-2FF4-4BA9-B6FD-7BBEB76C189B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,9 +42,14 @@ Global
 		{EE9A786B-3AEB-4A4B-BB5B-068B16ED9F79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE9A786B-3AEB-4A4B-BB5B-068B16ED9F79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE9A786B-3AEB-4A4B-BB5B-068B16ED9F79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85940E2F-2FF4-4BA9-B6FD-7BBEB76C189B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85940E2F-2FF4-4BA9-B6FD-7BBEB76C189B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85940E2F-2FF4-4BA9-B6FD-7BBEB76C189B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85940E2F-2FF4-4BA9-B6FD-7BBEB76C189B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{8671F254-6534-4183-A24C-E4104886BAC5} = {F331660B-4ABA-454F-A0CF-72CEF618D2CC}
 		{EE9A786B-3AEB-4A4B-BB5B-068B16ED9F79} = {8671F254-6534-4183-A24C-E4104886BAC5}
+		{85940E2F-2FF4-4BA9-B6FD-7BBEB76C189B} = {8671F254-6534-4183-A24C-E4104886BAC5}
 	EndGlobalSection
 EndGlobal
