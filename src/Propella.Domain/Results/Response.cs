@@ -2,12 +2,12 @@ using System.Collections.Generic;
 
 namespace Propella.Domain.Results
 {
-    public record Result<T> : Result where T : class
+    public record Response<T> : Response where T : class
     {
         public T Data { get; init; }
     }
     
-    public record Result : IHaveMeta
+    public record Response : IHaveMeta
     {
         public string ErrorCode { get; init; }
 
