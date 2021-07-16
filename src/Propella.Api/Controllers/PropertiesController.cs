@@ -1,6 +1,10 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Propella.Application.Queries;
+using Propella.Domain;
 
 namespace Propella.Api.Controllers
 {
@@ -9,20 +13,18 @@ namespace Propella.Api.Controllers
     public class PropertiesController : ControllerBase
     {
         private readonly ILogger<PropertiesController> _logger;
+        private readonly IMediator _mediator;
 
-        public PropertiesController(ILogger<PropertiesController> logger)
+        public PropertiesController(ILogger<PropertiesController> logger, IMediator mediator)
         {
             _logger = logger;
+            _mediator = mediator;
         }
 
         [HttpGet]
-        public IEnumerable<Property> Get()
+        public async Task<IEnumerable<Property>> GetProperties()
         {
-            return new List<Property>
-            {
-                new() {Address = "123 East St", Bedrooms = 2, BuildingType = "Home"},
-                new() {Address = "12/3 George St", Bedrooms = 1, BuildingType = "Unit"},
-            };
+            return (await _mediator.Send(new GetProperties())).Data;
         }
     }
 }

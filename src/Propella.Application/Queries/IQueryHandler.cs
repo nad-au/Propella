@@ -1,7 +1,7 @@
 using MediatR;
 using Propella.Domain.Results;
 
-namespace Propella.Application.Common.Cqrs
+namespace Propella.Application.Queries
 {
     public interface IQueryHandler<in TQuery, TResponse> : IRequestHandler<TQuery, TResponse>
         where TQuery : IQuery<TResponse>  where TResponse : Response
