@@ -5,6 +5,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\Integrations\Domain\V2\Domain.Api.Client\src\Domain.Api.Client\Domain.Api.Client.csproj" />
       <ProjectReference Include="..\Propella.Application\Propella.Application.csproj" />
     </ItemGroup>
 
