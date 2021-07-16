@@ -1,0 +1,51 @@
+# Domain.Api.V2.Client.Model.ListingsV2Listing
+Represents a Property Listing
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Objective** | [**ListingsV2Objective**](ListingsV2Objective.md) |  | [optional] 
+**Status** | [**ListingsV2Status**](ListingsV2Status.md) |  | [optional] 
+**SaleMode** | [**ListingsV2ListingSaleMode**](ListingsV2ListingSaleMode.md) |  | [optional] 
+**Channel** | [**ListingsV2Channel**](ListingsV2Channel.md) |  | [optional] 
+**Id** | **int** | The identifier which uniquely identifies the listing. | [optional] 
+**AddressParts** | [**ListingsV2AddressParts**](ListingsV2AddressParts.md) |  | [optional] 
+**AdvertiserIdentifiers** | [**ListingsV2AdvertiserIdentifiers**](ListingsV2AdvertiserIdentifiers.md) |  | [optional] 
+**ApmIdentifiers** | [**ListingsV2AustralianPropertyMonitorsIdentifiers**](ListingsV2AustralianPropertyMonitorsIdentifiers.md) |  | [optional] 
+**Bathrooms** | **float?** | Total number of bathrooms in the property | [optional] 
+**Bedrooms** | **float?** | Total number of bedrooms in the property; Studio apartments have a value of \\\&quot;0\\\&quot; | [optional] 
+**BuildingArea** | **string** | The building area display value of the property e.g. 160 ha | [optional] 
+**BuildingAreaSqm** | **double?** | The properties building area in square meters | [optional] 
+**Carspaces** | **float?** | Total number of car spaces in the property. | [optional] 
+**DateAvailable** | **DateTime?** | The date the property is available. DateTime is in AEST (Australian Eastern Standard Time) timezone. | [optional] 
+**DateCreated** | **DateTime** | The date/time the listing was created. DateTime is in AEST (Australian Eastern Standard Time) timezone. | [optional] 
+**DateUpdated** | **DateTime** | The date/time the listing had major update. DateTime is in AEST (Australian Eastern Standard Time) timezone. | [optional] 
+**DateMinorUpdated** | **DateTime** | When minor update applied to listing. DateTime is in AEST (Australian Eastern Standard Time) timezone. | [optional] 
+**DatePurged** | **DateTime?** | The date/time the listing was purged. It&#39;s only returned for archived listings. DateTime is in AEST (Australian Eastern Standard Time) timezone. | [optional] 
+**DateListed** | **DateTime?** | The date/time last listed. DateTime is in AEST (Australian Eastern Standard Time) timezone. | [optional] 
+**Description** | **string** | The long description of the property provided by the advertiser | [optional] 
+**DevProjectId** | **int?** | The ID of the development project - null if no associated project | [optional] 
+**EnergyEfficiencyRating** | **int?** | Energy Efficiency Rating value for ACT properties | [optional] 
+**Features** | **List&lt;string&gt;** | The property features specified by the advertiser | [optional] 
+**GeoLocation** | [**ListingsV2GeoLocation**](ListingsV2GeoLocation.md) |  | [optional] 
+**Headline** | **string** | The short description of the property provided by the advertiser | [optional] 
+**InspectionDetails** | [**ListingsV2PropertyInspections**](ListingsV2PropertyInspections.md) |  | [optional] 
+**IsNewDevelopment** | **bool** | Indicates whether the property is a new development | [optional] 
+**LandArea** | **string** | The land area display string for the property e.g. 160 sqm | [optional] 
+**LandAreaSqm** | **double?** | The properties land area in square meters | [optional] 
+**Media** | [**List&lt;ListingsV2ListingMedia&gt;**](ListingsV2ListingMedia.md) | The media associated with the property provided by the advertiser | [optional] 
+**PriceDetails** | [**ListingsV2PriceDetails**](ListingsV2PriceDetails.md) |  | [optional] 
+**PropertyId** | **string** | The identifier which uniquely identifies the property being advertised.   This may be empty if the Address of property is poorly described | [optional] 
+**PropertyTypes** | [**List&lt;ListingsV2PropertyType&gt;**](ListingsV2PropertyType.md) | Types of the property | [optional] 
+**RentalDetails** | [**ListingsV2RentalDetails**](ListingsV2RentalDetails.md) |  | [optional] 
+**SaleDetails** | [**ListingsV2SaleDetails**](ListingsV2SaleDetails.md) |  | [optional] 
+**IsWithdrawn** | **bool** | Indicates if the property has been withdrawn from the market  The value will be &#39;true&#39; When a listing is taken off market without being sold or leased. | [optional] 
+**SeoUrl** | **string** | Listing SEO URL | [optional] 
+**VirtualTourUrl** | **string** | The Listing&#39;s Virtual Tour URL. | [optional] 
+**HomepassEnabled** | **bool** | If Homepass is enabled for the listing (agency) | [optional] 
+**StatementOfInformation** | [**ListingsV2StatementOfInformation**](ListingsV2StatementOfInformation.md) |  | [optional] 
+**NumberOfDwellings** | **int?** | Number of dwellings for current listing | [optional] 
+**Highlights** | **List&lt;string&gt;** | Highlight items for the listing | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

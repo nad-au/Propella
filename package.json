@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "Find your dream home",
     "scripts": {
-        "gen-domain-api-client": "bash ./api/Domain/V2/gen-domain-api-client.sh"
+        "gen-domain-api-client": "bash ./api/Domain/gen-domain-api-client.sh"
     },
     "repository": {
         "type": "git",

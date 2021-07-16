@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
-using Domain.Api.Client.Api;
-using Domain.Api.Client.Client;
+using Domain.Api.V2.Client.Api;
+using Domain.Api.V2.Client.Client;
 using Microsoft.Extensions.Configuration;
 using Propella.Application.Interfaces;
 

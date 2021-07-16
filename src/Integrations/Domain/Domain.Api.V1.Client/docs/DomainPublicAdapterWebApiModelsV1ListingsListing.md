@@ -1,0 +1,53 @@
+# Domain.Api.V1.Client.Model.DomainPublicAdapterWebApiModelsV1ListingsListing
+Represents a Property Listing
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Objective** | **string** | The type of Advertisement | [optional] 
+**PropertyTypes** | **List&lt;string&gt;** | Types of the property e.g. House, Duplex, Apartment/Unit/Flat | [optional] 
+**Status** | **string** | The current status of the property | [optional] 
+**SaleMode** | **string** | Sale method of the property | [optional] 
+**Channel** | **string** | Listing channel | [optional] 
+**AddressParts** | [**DomainListingsServiceV1ModelDomainListingsApiModelQueryResultsListingAddressParts**](DomainListingsServiceV1ModelDomainListingsApiModelQueryResultsListingAddressParts.md) |  | [optional] 
+**AdvertiserIdentifiers** | [**DomainListingsServiceV1ModelDomainListingsApiModelQueryResultsListingAdvertiserIdentifiers**](DomainListingsServiceV1ModelDomainListingsApiModelQueryResultsListingAdvertiserIdentifiers.md) |  | [optional] 
+**ApmIdentifiers** | [**DomainListingsServiceV1ModelDomainListingsApiModelQueryResultsListingAustralianPropertyMonitorsIdentifiers**](DomainListingsServiceV1ModelDomainListingsApiModelQueryResultsListingAustralianPropertyMonitorsIdentifiers.md) |  | [optional] 
+**Bathrooms** | **float** | Total number of bathrooms in the property | [optional] 
+**Bedrooms** | **float** | Total number of bedrooms in the property; Studio apartments have a value of \\\&quot;0\\\&quot; | [optional] 
+**BuildingArea** | **string** | The building area display value of the property e.g. 160 ha | [optional] 
+**BuildingAreaSqm** | **double** | The properties building area in square meters | [optional] 
+**Carspaces** | **float** | Total number of car spaces in the property. | [optional] 
+**DateAvailable** | **DateTime** | The date the property is available | [optional] 
+**DateCreated** | **DateTime** | The date/time the listing was created | [optional] 
+**DateUpdated** | **DateTime** | The date/time the listing had major update | [optional] 
+**DateMinorUpdated** | **DateTime** | When minor update applied to listing | [optional] 
+**DateListed** | **DateTime** | The date/time the listing was first listed | [optional] 
+**DatePurged** | **DateTime** | The date/time the listing was purged. | [optional] 
+**Description** | **string** | The long description of the property provided by the advertiser | [optional] 
+**DevProjectId** | **int** | The ID of the development project - null if no associated project | [optional] 
+**EnergyEfficiencyRating** | **int** | Energy Efficiency Rating value for ACT properties | [optional] 
+**Features** | **List&lt;string&gt;** | The property features specified by the advertiser | [optional] 
+**GeoLocation** | [**DomainListingsServiceV1ModelDomainListingsApiModelQueryResultsListingGeoLocation**](DomainListingsServiceV1ModelDomainListingsApiModelQueryResultsListingGeoLocation.md) |  | [optional] 
+**Headline** | **string** | The short description of the property provided by the advertiser | [optional] 
+**Id** | **int** | The identifier which uniquely identifies the listing | [optional] 
+**InspectionDetails** | [**DomainListingsServiceV1ModelDomainListingsApiModelQueryResultsListingPropertyInspections**](DomainListingsServiceV1ModelDomainListingsApiModelQueryResultsListingPropertyInspections.md) |  | [optional] 
+**IsNewDevelopment** | **bool** | Indicates whether the property is a new development | [optional] 
+**LandArea** | **string** | The land area display string for the property e.g. 160 sqm | [optional] 
+**LandAreaSqm** | **double** | The properties land area in square meters | [optional] 
+**Media** | [**List&lt;DomainListingsServiceV1ModelDomainListingsApiModelQueryResultsListingListingMedia&gt;**](DomainListingsServiceV1ModelDomainListingsApiModelQueryResultsListingListingMedia.md) | The media associated with the property provided by the advertiser | [optional] 
+**PriceDetails** | [**DomainListingsServiceV1ModelDomainListingsApiModelQueryResultsListingPriceDetails**](DomainListingsServiceV1ModelDomainListingsApiModelQueryResultsListingPriceDetails.md) |  | [optional] 
+**PropertyId** | **string** | The identifier which uniquely identifies the property being advertised.                   This may be empty if the Address of property is poorly described | [optional] 
+**ProviderDetails** | [**DomainListingsServiceV1ModelDomainListingsApiModelQueryResultsListingProviderDetails**](DomainListingsServiceV1ModelDomainListingsApiModelQueryResultsListingProviderDetails.md) |  | [optional] 
+**RentalDetails** | [**DomainListingsServiceV1ModelDomainListingsApiModelQueryResultsListingRentalDetails**](DomainListingsServiceV1ModelDomainListingsApiModelQueryResultsListingRentalDetails.md) |  | [optional] 
+**SaleDetails** | [**DomainListingsServiceV1ModelDomainListingsApiModelQueryResultsListingSaleDetails**](DomainListingsServiceV1ModelDomainListingsApiModelQueryResultsListingSaleDetails.md) |  | [optional] 
+**IsWithdrawn** | **bool** | Indicates if the property has been withdrawn               from the market | [optional] 
+**SeoUrl** | **string** | listing SEO Url | [optional] 
+**ErrorMessage** | **string** | In case of a mapping error is used to display error details | [optional] 
+**VirtualTourUrl** | **string** | The Listing&#39;s Surroundpix Url. | [optional] 
+**HomepassEnabled** | **bool** | If homepass is enabled for the listing (agency) | [optional] 
+**StatementOfInformation** | [**DomainListingsServiceV1ModelDomainListingsApiModelQueryResultsListingStatementOfInformation**](DomainListingsServiceV1ModelDomainListingsApiModelQueryResultsListingStatementOfInformation.md) |  | [optional] 
+**NumberOfDwellings** | **int** | Number of dwellings for current listing | [optional] 
+**Highlights** | **List&lt;string&gt;** | Highlight items for the listing | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
