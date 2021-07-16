@@ -1,2 +1,2 @@
 # Propella
-Property portfolio app demonstrating Clean Architecture
+Find your dream home
