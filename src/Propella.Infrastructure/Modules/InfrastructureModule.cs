@@ -16,6 +16,7 @@ namespace Propella.Infrastructure.Modules
         protected override void Load(ContainerBuilder builder)
         {
             builder.RegisterType<DemographicsService>().AsImplementedInterfaces().InstancePerDependency();
+            builder.RegisterType<ResidentialSearchService>().AsImplementedInterfaces().InstancePerDependency();
         }
     }
 }
