@@ -1,0 +1,14 @@
+{
+    "name": "Propella",
+    "version": "1.0.0",
+    "description": "Find your dream home",
+    "scripts": {
+        "gen-domain-api-client": "bash ./api/Domain/V2/gen-domain-api-client.sh"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/neildobson-au/Propella.git"
+    },
+    "author": "Neil Dobson",
+    "homepage": "https://github.com/neildobson-au/Propella"
+}

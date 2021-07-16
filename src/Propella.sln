@@ -8,6 +8,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Propella.Application", "Pro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Propella.Api", "Propella.Api\Propella.Api.csproj", "{82EDDD78-2542-4987-8C2B-841B38D4A3A6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integrations", "Integrations", "{F331660B-4ABA-454F-A0CF-72CEF618D2CC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{8671F254-6534-4183-A24C-E4104886BAC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Api.Client", "Integrations\Domain\V2\Domain.Api.Client\src\Domain.Api.Client\Domain.Api.Client.csproj", "{EE9A786B-3AEB-4A4B-BB5B-068B16ED9F79}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +36,13 @@ Global
 		{82EDDD78-2542-4987-8C2B-841B38D4A3A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82EDDD78-2542-4987-8C2B-841B38D4A3A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82EDDD78-2542-4987-8C2B-841B38D4A3A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE9A786B-3AEB-4A4B-BB5B-068B16ED9F79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE9A786B-3AEB-4A4B-BB5B-068B16ED9F79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE9A786B-3AEB-4A4B-BB5B-068B16ED9F79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE9A786B-3AEB-4A4B-BB5B-068B16ED9F79}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8671F254-6534-4183-A24C-E4104886BAC5} = {F331660B-4ABA-454F-A0CF-72CEF618D2CC}
+		{EE9A786B-3AEB-4A4B-BB5B-068B16ED9F79} = {8671F254-6534-4183-A24C-E4104886BAC5}
 	EndGlobalSection
 EndGlobal
