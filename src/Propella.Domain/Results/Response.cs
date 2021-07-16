@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace Propella.Domain.Results
 {
-    public record Response<T> : Response where T : class
+    public record Response<T> : Response
     {
         public Response() { }
 
