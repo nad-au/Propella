@@ -1,31 +1,23 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Domain.Api.V1.Client.Api;
-using Domain.Api.V1.Client.Client;
 using Domain.Api.V1.Client.Model;
-using Microsoft.Extensions.Configuration;
 using Propella.Application.Interfaces;
 
-namespace Propella.Infrastructure.Services.Domain
+namespace Propella.Infrastructure.Services.Integrations.Domain
 {
     public class ResidentialSearchService : IResidentialSearchService
     {
-        private readonly IConfiguration _configuration;
+        private readonly IListingsApiAsync _listingsApi;
 
-        public ResidentialSearchService(IConfiguration configuration)
+        public ResidentialSearchService(IListingsApiAsync listingsApi)
         {
-            _configuration = configuration;
+            _listingsApi = listingsApi;
         }
         
         public async Task<int> GetCountAsync()
         {
-            Configuration config = new Configuration();
-            config.BasePath = _configuration["Integrations:Domain:baseUrl"];
-            config.ApiKey.Add("x-api-key", _configuration["Integrations:Domain:apiKey"]);
-
-            var apiInstance = new ListingsApi(config);
-            
-            var result = await apiInstance.ListingsDetailedResidentialSearchAsync(
+            var result = await _listingsApi.ListingsDetailedResidentialSearchAsync(
                 new DomainSearchServiceV2ModelDomainSearchWebApiV2ModelsSearchParameters
                 {
                     ListingType = DomainSearchServiceV2ModelDomainSearchWebApiV2ModelsSearchParameters.ListingTypeEnum
