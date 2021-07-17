@@ -10,10 +10,10 @@ namespace Propella.Api.Controllers
     [Route("[controller]")]
     public class DemographicsController : ControllerBase
     {
-        private readonly ILogger<PropertiesController> _logger;
+        private readonly ILogger<DemographicsController> _logger;
         private readonly IMediator _mediator;
 
-        public DemographicsController(ILogger<PropertiesController> logger, IMediator mediator)
+        public DemographicsController(ILogger<DemographicsController> logger, IMediator mediator)
         {
             _logger = logger;
             _mediator = mediator;

@@ -10,10 +10,10 @@ namespace Propella.Api.Controllers
     [Route("[controller]")]
     public class PropertySearchController : ControllerBase
     {
-        private readonly ILogger<PropertiesController> _logger;
+        private readonly ILogger<PropertySearchController> _logger;
         private readonly IMediator _mediator;
 
-        public PropertySearchController(ILogger<PropertiesController> logger, IMediator mediator)
+        public PropertySearchController(ILogger<PropertySearchController> logger, IMediator mediator)
         {
             _logger = logger;
             _mediator = mediator;
