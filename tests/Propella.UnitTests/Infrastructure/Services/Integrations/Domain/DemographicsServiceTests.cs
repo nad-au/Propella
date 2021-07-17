@@ -33,11 +33,14 @@ namespace Propella.UnitTests.Infrastructure.Services.Integrations.Domain
         [Test]
         public async Task It_Should_Return_Correct_Count()
         {
+            // Arrange
             DemographicsApi.DemographicsGetByNamedSuburbAsync(default, default, default)
                 .ReturnsForAnyArgs(Task.FromResult(GoodResults));
             
+            // Act
             var result = await Sut.GetCountAsync();
 
+            // Assert
             result.Should().Be(2);
         }
     }

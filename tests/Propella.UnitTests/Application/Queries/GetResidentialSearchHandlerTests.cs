@@ -23,11 +23,14 @@ namespace Propella.UnitTests.Application.Queries
         [Test]
         public async Task It_Should_Return_Correct_Count()
         {
+            // Arrange
             ResidentialSearchService.GetCountAsync()
                 .Returns(Task.FromResult(2));
 
+            // Act
             var result = await Sut.Handle(new GetResidentialSearch(), CancellationToken.None);
 
+            // Assert
             result.Data.Should().Be(2);
         }
     }
