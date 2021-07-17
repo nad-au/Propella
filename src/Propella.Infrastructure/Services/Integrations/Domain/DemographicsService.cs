@@ -1,5 +1,5 @@
 using System.Threading.Tasks;
-using Domain.Api.V2.Client.Api;
+using Domain.Api.V2.Api;
 using Propella.Application.Interfaces;
 
 namespace Propella.Infrastructure.Services.Integrations.Domain

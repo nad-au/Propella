@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Domain.Api.V2.Client.Api;
-using Domain.Api.V2.Client.Model;
+using Domain.Api.V2.Api;
+using Domain.Api.V2.Model;
 using FluentAssertions;
 using NSubstitute;
 using NUnit.Framework;

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Domain.Api.V1.Client.Api;
-using Domain.Api.V1.Client.Model;
+using Domain.Api.V1.Api;
+using Domain.Api.V1.Model;
 using Propella.Application.Interfaces;
 
 namespace Propella.Infrastructure.Services.Integrations.Domain

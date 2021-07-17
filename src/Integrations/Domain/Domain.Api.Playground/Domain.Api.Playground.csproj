@@ -6,8 +6,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Domain.Api.V1.Client\src\Domain.Api.V1.Client\Domain.Api.V1.Client.csproj" />
-      <ProjectReference Include="..\Domain.Api.V2.Client\src\Domain.Api.V2.Client\Domain.Api.V2.Client.csproj" />
+      <ProjectReference Include="..\Domain.Api.V1\src\Domain.Api.V1\Domain.Api.V1.csproj" />
+      <ProjectReference Include="..\Domain.Api.V2\src\Domain.Api.V2\Domain.Api.V2.csproj" />
     </ItemGroup>
 
     <ItemGroup>

@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics;
 using System.IO;
-using Domain.Api.V2.Client.Api;
-using Domain.Api.V2.Client.Client;
-using Domain.Api.V2.Client.Model;
+using Domain.Api.V2.Api;
+using Domain.Api.V2.Client;
+using Domain.Api.V2.Model;
 using Microsoft.Extensions.Configuration;
 
 namespace Domain.Api.Playground

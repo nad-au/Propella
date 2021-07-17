@@ -5,8 +5,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Integrations\Domain\Domain.Api.V1.Client\src\Domain.Api.V1.Client\Domain.Api.V1.Client.csproj" />
-      <ProjectReference Include="..\Integrations\Domain\Domain.Api.V2.Client\src\Domain.Api.V2.Client\Domain.Api.V2.Client.csproj" />
+      <ProjectReference Include="..\Integrations\Domain\Domain.Api.V1\src\Domain.Api.V1\Domain.Api.V1.csproj" />
+      <ProjectReference Include="..\Integrations\Domain\Domain.Api.V2\src\Domain.Api.V2\Domain.Api.V2.csproj" />
       <ProjectReference Include="..\Propella.Application\Propella.Application.csproj" />
     </ItemGroup>
 
