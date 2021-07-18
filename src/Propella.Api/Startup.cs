@@ -36,7 +36,6 @@ namespace Propella.Api
         
         public void ConfigureContainer(ContainerBuilder builder)
         {
-            builder.RegisterModule<MediatorModule>();
             builder.RegisterModule<InfrastructureModule>();
             builder.RegisterModule<ApplicationModule>();
         }
