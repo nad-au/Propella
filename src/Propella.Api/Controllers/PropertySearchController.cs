@@ -2,7 +2,7 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Propella.Application.Queries;
+using Propella.Application.Queries.GetResidentialSearch;
 
 namespace Propella.Api.Controllers
 {
@@ -22,7 +22,7 @@ namespace Propella.Api.Controllers
         [HttpGet]
         public async Task<int> GetCountAsync()
         {
-            return (await _mediator.Send(new GetResidentialSearch())).Data;
+            return (await _mediator.Send(new GetResidentialSearchQuery())).Data;
         }
     }
 }

@@ -2,7 +2,6 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Propella.Application.Queries;
 using Propella.Application.Queries.GetDemographics;
 
 namespace Propella.Api.Controllers

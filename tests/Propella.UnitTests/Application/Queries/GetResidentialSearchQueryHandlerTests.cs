@@ -5,12 +5,13 @@ using NSubstitute;
 using NUnit.Framework;
 using Propella.Application.Interfaces;
 using Propella.Application.Queries;
+using Propella.Application.Queries.GetResidentialSearch;
 
 namespace Propella.UnitTests.Application.Queries
 {
-    public class GetResidentialSearchHandlerTests
+    public class GetResidentialSearchQueryHandlerTests
     {
-        private GetResidentialSearch.GetResidentialSearchHandler Sut => new(ResidentialSearchService);
+        private GetResidentialSearchQuery.GetResidentialSearchQueryHandler Sut => new(ResidentialSearchService);
         
         private IResidentialSearchService ResidentialSearchService { get; set; }
 
@@ -28,7 +29,7 @@ namespace Propella.UnitTests.Application.Queries
                 .Returns(Task.FromResult(2));
 
             // Act
-            var result = await Sut.Handle(new GetResidentialSearch(), CancellationToken.None);
+            var result = await Sut.Handle(new GetResidentialSearchQuery(), CancellationToken.None);
 
             // Assert
             result.Data.Should().Be(2);

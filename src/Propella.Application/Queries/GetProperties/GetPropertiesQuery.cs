@@ -4,13 +4,13 @@ using System.Threading.Tasks;
 using Propella.Application.Results;
 using Propella.Domain;
 
-namespace Propella.Application.Queries
+namespace Propella.Application.Queries.GetProperties
 {
-    public record GetProperties : IQuery<Response<ICollection<Property>>>
+    public record GetPropertiesQuery : IQuery<Response<ICollection<Property>>>
     {
-        public class GetPropertiesHandler : IQueryHandler<GetProperties, Response<ICollection<Property>>>
+        public class GetPropertiesQueryHandler : IQueryHandler<GetPropertiesQuery, Response<ICollection<Property>>>
         {
-            public Task<Response<ICollection<Property>>> Handle(GetProperties request, CancellationToken cancellationToken)
+            public Task<Response<ICollection<Property>>> Handle(GetPropertiesQuery request, CancellationToken cancellationToken)
             {
                 return Task.FromResult(new Response<ICollection<Property>>(new List<Property>
                 {

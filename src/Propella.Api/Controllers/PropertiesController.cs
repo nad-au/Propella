@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Propella.Application.Queries;
+using Propella.Application.Queries.GetProperties;
 using Propella.Domain;
 
 namespace Propella.Api.Controllers
@@ -24,7 +24,7 @@ namespace Propella.Api.Controllers
         [HttpGet]
         public async Task<IEnumerable<Property>> GetProperties()
         {
-            return (await _mediator.Send(new GetProperties())).Data;
+            return (await _mediator.Send(new GetPropertiesQuery())).Data;
         }
     }
 }
