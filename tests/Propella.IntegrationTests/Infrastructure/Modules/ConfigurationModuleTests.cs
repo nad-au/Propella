@@ -5,7 +5,7 @@ using Autofac.Core;
 using FluentAssertions;
 using Microsoft.Extensions.Configuration;
 using NUnit.Framework;
-using Propella.Application.Configuration;
+using Propella.Application.Configurations;
 using Propella.Infrastructure.Modules.Internal;
 
 namespace Propella.IntegrationTests.Infrastructure.Modules

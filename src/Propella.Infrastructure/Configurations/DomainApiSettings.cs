@@ -1,6 +1,6 @@
-using Propella.Application.Configuration;
+using Propella.Application.Configurations;
 
-namespace Propella.Infrastructure.Configuration
+namespace Propella.Infrastructure.Configurations
 {
     public class DomainApiSettings : IHavePath
     {

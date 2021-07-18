@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 using Propella.Application.Exceptions;
 using Propella.Application.Queries;
 using Propella.Application.Results;
-using Propella.Application.Validation;
+using Propella.Application.Validations;
 using Propella.Infrastructure.Logging;
 
 namespace Propella.Infrastructure.Pipelines

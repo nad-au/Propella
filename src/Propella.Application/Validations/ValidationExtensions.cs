@@ -4,7 +4,7 @@ using FluentValidation;
 using FluentValidation.Results;
 using Propella.Application.Results;
 
-namespace Propella.Application.Validation
+namespace Propella.Application.Validations
 {
     public static class ValidationExtensions
     {

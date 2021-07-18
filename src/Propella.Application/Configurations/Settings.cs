@@ -1,4 +1,4 @@
-namespace Propella.Application.Configuration
+namespace Propella.Application.Configurations
 {
     public class Settings<T> : ISettings<T> where T : class
     {

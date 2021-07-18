@@ -1,6 +1,6 @@
 using FluentValidation;
 using Propella.Application.Results;
-using Propella.Application.Validation;
+using Propella.Application.Validations;
 
 namespace Propella.Application.Queries.GetDemographics
 {

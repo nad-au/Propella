@@ -1,7 +1,7 @@
 using Autofac;
 using Domain.Api.V2.Api;
-using Propella.Application.Configuration;
-using Propella.Infrastructure.Configuration;
+using Propella.Application.Configurations;
+using Propella.Infrastructure.Configurations;
 using V2Configuration = Domain.Api.V2.Client.Configuration;
 
 namespace Propella.Infrastructure.Modules.Internal
