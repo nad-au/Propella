@@ -23,7 +23,7 @@ namespace Propella.Api.Controllers
         [HttpGet]
         public async Task<int> GetCountAsync()
         {
-            return (await _mediator.Send(new GetDemographicsQuery(5))).Data;
+            return (await _mediator.Send(new GetDemographicsQuery(null))).Data;
         }
     }
 }

@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using Propella.Application.Exceptions;
 using Propella.Application.Queries;
 using Propella.Application.Results;
+using Propella.Application.Validation;
 using Propella.Infrastructure.Logging;
 
 namespace Propella.Infrastructure.Pipelines
@@ -25,7 +26,7 @@ namespace Propella.Infrastructure.Pipelines
         }
 
         /// <inheritdoc />
-        public async Task<TResponse> Handle(TQuery command, CancellationToken cancellationToken,
+        public async Task<TResponse> Handle(TQuery query, CancellationToken cancellationToken,
             RequestHandlerDelegate<TResponse> next) {
             var queryName = typeof(TQuery).Name;
 
@@ -40,20 +41,13 @@ namespace Propella.Infrastructure.Pipelines
             var validator = _lifetimeScope.ResolveOptional<IValidator<TQuery>>();
             if (validator != null)
             {
-                var result = await validator.ValidateAsync(command, cancellationToken);
+                var result = await validator.ValidateAsync(query, cancellationToken);
                 if (!result.IsValid)
                 {
-                    
                     var errorResponse = new TResponse
                     {
-                        Message = "Its bad",
-                        Errors = new List<Error>
-                        {
-                            new()
-                            {
-                                Level = ErrorLevel.Critical
-                            }
-                        }
+                        Message = "Validation error",
+                        Errors = result.AsErrors()
                     };
                     _logger.LogInformation($"Query '{queryName}' terminated with errors");
                     throw new QueryException(errorResponse, $"Query '{queryName}' terminated with errors");

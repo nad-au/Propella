@@ -26,7 +26,7 @@ namespace Propella.Api
         {
             services.AddControllers(options =>
             {
-                options.Filters.Add<QueryExceptionActionFilter>();
+                options.Filters.Add<ErrorsExceptionActionFilter>();
             });
             services.AddSwaggerGen(c =>
             {

@@ -1,4 +1,6 @@
 using FluentValidation;
+using Propella.Application.Results;
+using Propella.Application.Validation;
 
 namespace Propella.Application.Queries.GetDemographics
 {
@@ -7,7 +9,9 @@ namespace Propella.Application.Queries.GetDemographics
         public GetDemographicsQueryValidator()
         {
             RuleFor(q => q.SomeVar)
-                .NotNull();
+                .NotNull()
+                .WithError(Err.NotNull())
+                .WithState(q => ErrorLevel.Critical);
         }
     }
 }

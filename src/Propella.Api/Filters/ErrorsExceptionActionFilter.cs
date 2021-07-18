@@ -6,11 +6,11 @@ using Propella.Application.Results;
 
 namespace Propella.Api.Filters
 {
-    public class QueryExceptionActionFilter : IExceptionFilter
+    public class ErrorsExceptionActionFilter : IExceptionFilter
     {
         public void OnException(ExceptionContext context)
         {
-            if (context.Exception is not QueryException qe) return;
+            if (context.Exception is not ErrorsException qe) return;
 
             if (qe.IsCritical())
             {
