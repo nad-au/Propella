@@ -1,7 +1,7 @@
 using System;
 using Autofac;
 using Microsoft.Extensions.Configuration;
-using Propella.Domain.Configuration;
+using Propella.Application.Configuration;
 
 namespace Propella.Infrastructure.Modules.Internal
 {

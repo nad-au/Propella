@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Propella.Domain.Results
+namespace Propella.Application.Results
 {
     public record Error : IHaveMeta
     {
@@ -9,6 +9,8 @@ namespace Propella.Domain.Results
         public string? Field { get; init; }
 
         public string? Message { get; init; }
+        
+        public ErrorLevel Level { get; init; } = ErrorLevel.Error;
 
         public Dictionary<string, string> Meta { get; set; } = new();
     }

@@ -1,4 +1,4 @@
-namespace Propella.Domain.Configuration
+namespace Propella.Application.Configuration
 {
     public interface IHavePath
     {

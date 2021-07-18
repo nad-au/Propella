@@ -1,5 +1,5 @@
 using MediatR;
-using Propella.Domain.Results;
+using Propella.Application.Results;
 
 namespace Propella.Application.Queries
 {

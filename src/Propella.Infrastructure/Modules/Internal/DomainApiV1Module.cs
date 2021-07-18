@@ -1,6 +1,6 @@
 using Autofac;
 using Domain.Api.V1.Api;
-using Propella.Domain.Configuration;
+using Propella.Application.Configuration;
 using Propella.Infrastructure.Configuration;
 using V1Configuration = Domain.Api.V1.Client.Configuration;
 

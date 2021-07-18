@@ -5,12 +5,13 @@ using NSubstitute;
 using NUnit.Framework;
 using Propella.Application.Interfaces;
 using Propella.Application.Queries;
+using Propella.Application.Queries.GetDemographics;
 
 namespace Propella.UnitTests.Application.Queries
 {
-    public class GetDemographicsHandlerTests
+    public class GetDemographicsQueryHandlerTests
     {
-        private GetDemographics.GetDemographicsHandler Sut => new(DemographicsService);
+        private GetDemographicsQuery.GetDemographicsQueryHandler Sut => new(DemographicsService);
         
         private IDemographicsService DemographicsService { get; set; }
 
@@ -28,7 +29,7 @@ namespace Propella.UnitTests.Application.Queries
                 .Returns(Task.FromResult(2));
 
             // Act
-            var result = await Sut.Handle(new GetDemographics(), CancellationToken.None);
+            var result = await Sut.Handle(new GetDemographicsQuery(5), CancellationToken.None);
 
             // Assert
             result.Data.Should().Be(2);

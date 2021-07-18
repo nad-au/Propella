@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Propella.Domain.Results
+namespace Propella.Application.Results
 {
     public interface IHaveMeta
     {

@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using MediatR;
 using Microsoft.Extensions.Logging;
 using Propella.Application.Commands;
-using Propella.Domain.Results;
+using Propella.Application.Results;
 using Propella.Infrastructure.Logging;
 
 namespace Propella.Infrastructure.Pipelines

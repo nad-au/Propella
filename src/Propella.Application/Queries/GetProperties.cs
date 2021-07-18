@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using Propella.Application.Results;
 using Propella.Domain;
-using Propella.Domain.Results;
 
 namespace Propella.Application.Queries
 {

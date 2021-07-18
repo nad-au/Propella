@@ -1,7 +1,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 using Propella.Application.Interfaces;
-using Propella.Domain.Results;
+using Propella.Application.Results;
 
 namespace Propella.Application.Queries
 {

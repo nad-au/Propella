@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Propella.Domain.Results
+namespace Propella.Application.Results
 {
     public record Response<T> : Response
     {
@@ -14,7 +14,7 @@ namespace Propella.Domain.Results
         public T? Data { get; init; }
     }
     
-    public record Response : IHaveMeta
+    public record Response : IHaveMeta, IHaveErrors
     {
         public string? ErrorCode { get; init; }
 
@@ -22,7 +22,7 @@ namespace Propella.Domain.Results
 
         public string? StackTrace { get; init; }
 
-        public ICollection<Error> Errors { get; init; } = new List<Error>();
+        public ICollection<Error> Errors { get; set; } = new List<Error>();
 
         public Dictionary<string, string> Meta { get; set; } = new();
     }

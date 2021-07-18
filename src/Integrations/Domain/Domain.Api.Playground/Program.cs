@@ -14,8 +14,8 @@ namespace Domain.Api.Playground
             var configuration = GetConfiguration();
             
             Configuration config = new Configuration();
-            config.BasePath = configuration["Integrations:Domain:baseUrl"];
-            config.ApiKey.Add("x-api-key", configuration["Integrations:Domain:apiKey"]);
+            config.BasePath = configuration["Integrations:Domain:BaseUrl"];
+            config.ApiKey.Add("x-api-key", configuration["Integrations:Domain:ApiKey"]);
 
             var apiInstance = new DemographicsApi(config);
             var state = "NSW";  // string | The Australian state abbreviation

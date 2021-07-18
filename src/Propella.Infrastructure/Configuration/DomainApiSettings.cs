@@ -1,4 +1,4 @@
-using Propella.Domain.Configuration;
+using Propella.Application.Configuration;
 
 namespace Propella.Infrastructure.Configuration
 {
