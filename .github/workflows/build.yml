@@ -1,4 +1,4 @@
-name: Propella
+name: Build
 
 on:
   push:
