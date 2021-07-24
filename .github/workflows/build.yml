@@ -1,4 +1,4 @@
-name: .NET
+name: Propella
 
 on:
   push:
