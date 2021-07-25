@@ -15,7 +15,7 @@ namespace Propella.Application.Queries.GetProperties
                 return Task.FromResult(new Response<ICollection<Property>>(new List<Property>
                 {
                     new() {Address = "123 East St", Bedrooms = 2, BuildingType = "Home"},
-                    new() {Address = "12/3 George St", Bedrooms = 1, BuildingType = "Unit"},
+                    new() {Address = "42 Burdett St", Bedrooms = 1, BuildingType = "Unit"},
                 }));
             }
         }
