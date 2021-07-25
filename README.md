@@ -9,4 +9,4 @@ Find your dream home
 
 ## Coverage
 
-[![Coverage Status](https://coveralls.io/repos/github/neildobson-au/Propella/badge.svg?branch=main)](https://coveralls.io/github/neildobson-au/Propella?branch=main)
+[![Coverage Status](https://coveralls.io/repos/github/neildobson-au/Propella/badge.svg)](https://coveralls.io/github/neildobson-au/Propella)
