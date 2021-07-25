@@ -8,6 +8,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Propella.Api.Filters;
 using Propella.Infrastructure.Modules;
+using Serilog;
 
 namespace Propella.Api
 {
@@ -16,6 +17,10 @@ namespace Propella.Api
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            
+            Log.Logger = new LoggerConfiguration()
+                .ReadFrom.Configuration(configuration)
+                .CreateLogger();
         }
 
         public IConfiguration Configuration { get; }
