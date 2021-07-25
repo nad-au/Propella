@@ -37,9 +37,9 @@ namespace Build
             }
         }
         
-        [TaskName("Test")]
+        [TaskName("UnitTest")]
         [IsDependentOn(typeof(BuildTask))]
-        public sealed class TestTask : FrostingTask<BuildContext>
+        public sealed class UnitTestTask : FrostingTask<BuildContext>
         {
             public override void Run(BuildContext context)
             {
@@ -49,8 +49,10 @@ namespace Build
                     CoverletOutputDirectory = context.CoveragePath,
                     CoverletOutputName = Path.Combine("unit-tests"),
                 };
+
+                var unitTestsProject = Path.Combine(context.TestsPath, "Propella.UnitTests");
                 
-                context.DotNetCoreTest(context.SolutionPath, new DotNetCoreTestSettings
+                context.DotNetCoreTest(unitTestsProject, new DotNetCoreTestSettings
                 {
                     Configuration = context.MsBuildConfiguration,
                     NoBuild = true,
@@ -58,7 +60,24 @@ namespace Build
             }
         }
         
-        [IsDependentOn(typeof(TestTask))]
+        [TaskName("IntegrationTest")]
+        [IsDependentOn(typeof(BuildTask))]
+        public sealed class IntegrationTestTask : FrostingTask<BuildContext>
+        {
+            public override void Run(BuildContext context)
+            {
+                var integrationTestsProject = Path.Combine(context.TestsPath, "Propella.IntegrationTests");
+                
+                context.DotNetCoreTest(integrationTestsProject, new DotNetCoreTestSettings
+                {
+                    Configuration = context.MsBuildConfiguration,
+                    NoBuild = true,
+                });
+            }
+        }
+
+        [IsDependentOn(typeof(UnitTestTask))]
+        [IsDependentOn(typeof(IntegrationTestTask))]
         public sealed class RulAll : FrostingTask
         {
         }

@@ -19,11 +19,13 @@ public class BuildContext : FrostingContext
     public string SourcePath { get; set; }
     public string SolutionPath { get; set; }
     public string CoveragePath { get; set; }
+    public string TestsPath { get; set; }
     
     public BuildContext(ICakeContext context)
         : base(context) {
         MsBuildConfiguration = context.Argument("configuration", "Debug");
         SourcePath = "../../src";
+        TestsPath = "../../tests";
         CoveragePath = "../../.coverage";
         SolutionPath = Path.Combine(SourcePath, "Propella.sln");
     }
