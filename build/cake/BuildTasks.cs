@@ -49,6 +49,7 @@ namespace Build
                     CoverletOutputFormat = CoverletOutputFormat.lcov,
                     CoverletOutputDirectory = context.CoveragePath,
                     CoverletOutputName = Path.Combine("unit-tests"),
+                    Exclude = new List<string> { "[Domain.Api*]*"},
                     ExcludeByAttribute = new List<string> { "Obsolete", "CompilerGeneratedAttribute", "GeneratedCodeAttribute"}
                 };
 
