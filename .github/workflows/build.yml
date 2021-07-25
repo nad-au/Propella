@@ -17,5 +17,13 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 5.0.x
+        
     - name: Cake Build
       run: dotnet run --project ./build/cake/Build.csproj
+
+    - name: Coveralls
+      uses: coverallsapp/github-action@master
+      with:
+        path-to-lcov: .coverage/unit-tests.info
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        

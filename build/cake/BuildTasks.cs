@@ -1,8 +1,10 @@
+using System;
 using System.IO;
 using Cake.Common.IO;
 using Cake.Common.Tools.DotNetCore;
 using Cake.Common.Tools.DotNetCore.Build;
 using Cake.Common.Tools.DotNetCore.Test;
+using Cake.Coverlet;
 using Cake.Frosting;
 
 namespace Build
@@ -41,11 +43,18 @@ namespace Build
         {
             public override void Run(BuildContext context)
             {
+                var coverletSettings = new CoverletSettings {
+                    CollectCoverage = true,
+                    CoverletOutputFormat = CoverletOutputFormat.lcov,
+                    CoverletOutputDirectory = context.CoveragePath,
+                    CoverletOutputName = Path.Combine("unit-tests"),
+                };
+                
                 context.DotNetCoreTest(context.SolutionPath, new DotNetCoreTestSettings
                 {
                     Configuration = context.MsBuildConfiguration,
                     NoBuild = true,
-                });
+                }, coverletSettings);
             }
         }
         
