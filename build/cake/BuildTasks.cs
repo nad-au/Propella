@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using Cake.Common.IO;
 using Cake.Common.Tools.DotNetCore;
@@ -48,6 +49,7 @@ namespace Build
                     CoverletOutputFormat = CoverletOutputFormat.lcov,
                     CoverletOutputDirectory = context.CoveragePath,
                     CoverletOutputName = Path.Combine("unit-tests"),
+                    ExcludeByAttribute = new List<string> { "Obsolete", "CompilerGeneratedAttribute", "GeneratedCodeAttribute"}
                 };
 
                 var unitTestsProject = Path.Combine(context.TestsPath, "Propella.UnitTests");
